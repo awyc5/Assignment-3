@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+         <!-- Link Swiper's CSS -->
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+            <style>
+                @import url("https://use.typekit.net/hcw4sac.css");
+            </style>
+             <link rel="stylesheet" href="style.css">
+            <title>Document</title>
+        </head>
+        <body>
+            <header class="header">
+                <h1>Mahiro Maeda</h1>
+                <h4>前田真宏</h4>
+            </header>
+            <div id="section1" class="headerinfo">
+                <h6>Character Designer // Director // Animator</h6> 
+                <img src="public/images/whitearrows.svg" alt="arrow icon">
+                    <a href="#section2"><button>Enter</button></a>
+            </div>
+            <main>
+                <section class="hero homepage">
+                </section>
+                    <section id="section2" class="works">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="public/images/sjhu.png"></div>
+                            <div class="swiper-slide"><img src="public/images/krposterdesigns.png"></div>
+                            <div class="swiper-slide"><img src="public/images/shingodzilla.png"></div>
+                            <div class="swiper-slide"><img src="public/images/godzilla_eva.jpg"></div>
+                            <div class="swiper-slide"><img src="public/images/ultramankaiju.png"></div>
+                            <div class="swiper-slide"><img src="public/images/krcollabcafe.png"></div>
+                            <div class="swiper-slide"><img src="public/images/parcoexhibit.png"></div>
+                            <div class="swiper-slide"><img src="public/images/bluesubmarine.jpg"></div>
+                            <div class="swiper-slide">Slide 9</div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                </section>
+                <section class="about">
+                </section>
+            </main>
+                 <!-- Swiper JS -->
+                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+                 <!-- Initialize Swiper -->
+                 <script>
+                    var swiper = new Swiper(".mySwiper", {
+                      pagination: {
+                        el: ".swiper-pagination",
+                        type: "fraction",
+                      },
+                      navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                      },
+                    });
+                  </script>
+        </body>
+</html>
