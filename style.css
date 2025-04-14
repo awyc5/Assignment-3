@@ -16,13 +16,6 @@ body {
     background-repeat: no-repeat;
 }
 
-img {
-    display: block;
-    width: 88px;
-    height: 88px;
-    padding: 4px;
-}
-
 .header {
     display: flex;
 }
@@ -45,6 +38,13 @@ img {
 .headerinfo {
     display: flex;
     align-items: center;
+}
+
+.headerinfo img {
+        display: block;
+        width: 88px;
+        height: 88px;
+        padding: 4px;
 }
 
 .headerinfo h6 {
@@ -92,7 +92,7 @@ button{
     color: #000;
     margin: 20px;
     padding: 20px;
-    background-image: url('public/images/foldervector.svg');
+    background-image: url('public/images/folder.svg');
     background-size: 85%;
     background-repeat: no-repeat;
     background-position: center;
@@ -112,20 +112,141 @@ button{
     background-color: white;
 }
 
+.swiper-slide:hover::after {
+    content: attr(data-hover);
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0); 
+    font-family: "dela gothic one";
+    font-size: 40px;
+    font-weight: 900;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.swiper-slide:hover img{
+    opacity: 50%;
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+}
+
+
 .swiper-slide img {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .swiper-button-prev {
-    background-image: url("public/images/arrowsleft.svg") !important;
-  }
+    width: 50px;
+    background-image: url("public/images/arrowsleft.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
   
-  .swiper-button-next {
-    background-image: url("public/images/arrowsright.svg") !important;
-  }
+.swiper-button-next {
+    width: 50px;
+    background-image: url("public/images/arrowsright.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    color: transparent;
+}
+
+.swiper-pagination {
+    color: #CA151E;
+    -webkit-text-stroke: 1px rgb(24, 24, 24);
+    font-family: "orbitron";
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.about {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    flex-wrap: wrap; 
+    text-align: center; 
+}
+
+.about img {
+    width: 35%;
+    height: auto; 
+    margin: 10px; 
+    object-fit: cover; 
+}
+
+.folder-container {
+    position: relative; /* Make the container a positioned element */
+    display: inline-block; /* Ensure the image and icons are inline */
+}
+
+.folder-container img {
+    width: 100%; /* Adjust the size of the folder image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.folder-container .icons {
+    position: absolute; /* Position the icons on top of the folder */
+    bottom: 10px; /* Adjust the vertical position */
+    right: 10px; /* Adjust the horizontal position */
+    display: flex; /* Align icons horizontally */
+    gap: 10px; /* Add spacing between icons */
+}
+
+.folder-container .icons img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+    object-fit: contain; /* Ensure icons maintain their aspect ratio */
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.folder-container .icons img:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+footer {
+    background-color: #222; 
+    color: #CA151E; 
+    font-family: "orbitron"; 
+    text-align: center; 
+    padding: 20px 0; 
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px; 
+}
+
+.footer-icons img {
+    width: 30px; 
+    height: 30px;
+    object-fit: contain; 
+    transition: transform 0.3s ease;
+}
+
+.footer-icons img:hover {
+    transform: scale(1.2); 
+}
 
 html {
     scroll-behavior: smooth;
