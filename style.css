@@ -25,6 +25,7 @@ body {
     color: white;
     font-weight: 900;
     font-size: 90px;
+    padding: 10px;
 }
 
 .header h4 {
@@ -83,8 +84,8 @@ button{
     position: relative;
     height: 100vh;
     width: 100%;
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center horizontally */
+    display: flex; 
+    justify-content: center;
     align-items: center;
     background: rgb(34, 34, 34);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -109,7 +110,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    overflow: hidden;
 }
 
 .swiper-slide:hover::after {
@@ -127,7 +128,7 @@ button{
     transition: opacity 0.3s ease-in-out;
 }
 
-.swiper-slide:hover img{
+.swiper-slide:hover img {
     opacity: 50%;
     transition: opacity 0.5s ease-in-out;
     text-align: center;
@@ -135,11 +136,12 @@ button{
     display: flex;
 }
 
-
 .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    max-width: 100%; 
+    max-height: 100%; 
 }
 
 .swiper-button-prev {
@@ -174,45 +176,44 @@ button{
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    height: 100vh; 
     flex-wrap: wrap; 
     text-align: center; 
 }
 
 .about img {
     width: 35%;
-    height: auto; 
+    height: 35%;
     margin: 10px; 
     object-fit: cover; 
 }
 
 .folder-container {
-    position: relative; /* Make the container a positioned element */
-    display: inline-block; /* Ensure the image and icons are inline */
+    position: relative; 
+    display: inline-block; 
 }
 
 .folder-container img {
-    width: 100%; /* Adjust the size of the folder image */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
 }
 
 .folder-container .icons {
-    position: absolute; /* Position the icons on top of the folder */
-    bottom: 10px; /* Adjust the vertical position */
-    right: 10px; /* Adjust the horizontal position */
-    display: flex; /* Align icons horizontally */
-    gap: 10px; /* Add spacing between icons */
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px; 
+    display: flex; 
+    gap: 10px; 
 }
 
 .folder-container .icons img {
-    width: 40px; /* Adjust the size of the icons */
+    width: 40px; 
     height: 40px;
-    object-fit: contain; /* Ensure icons maintain their aspect ratio */
-    transition: transform 0.3s ease; /* Add hover effect */
+    object-fit: contain; 
+    transition: transform 0.3s ease; 
 }
 
 .folder-container .icons img:hover {
-    transform: scale(1.2); /* Slight zoom on hover */
+    transform: scale(1.2); 
 }
 
 footer {
@@ -250,4 +251,73 @@ footer {
 
 html {
     scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .hero.homepage {
+        height: 80vh; 
+        background-size: contain; 
+    }
+    .header h1 {
+        font-size: 60px; 
+    }
+
+    .header h4 {
+        font-size: 30px; 
+    }
+    .headerinfo h6 {
+        font-size: 30px; 
+        padding: 2px 5px; 
+    }
+    button {
+        font-size: 24px; 
+        padding: 8px 60px;
+    }
+
+    .swiper-slide:hover::after {
+            font-size: 30px; 
+            padding: 5px; 
+    }
+    .swiper-button-prev {
+        width: 30px; 
+    }
+    .swiper-button-next {
+        width: 30px;
+    }
+
+
+@media (max-width: 480px) {
+    .hero.homepage {
+        height: 70vh; 
+        background-size: contain; 
+        background-position: top; 
+    }
+    .header h1 {
+        font-size: 40px; 
+    }
+
+    .header h4 {
+        font-size: 20px; 
+    }
+
+    .headerinfo h6 {
+        font-size: 20px; 
+        padding: 2px 5px; 
+        margin: 5px; 
+    }
+
+    button {
+        font-size: 18px; 
+        padding: 6px 40px; 
+    }
+    .swiper-slide:hover::after {
+        font-size: 15px; 
+    }
+    .swiper-button-prev {
+        width: 20px; 
+    }
+    .swiper-button-next {
+        width: 20px; 
+    }
+}
 }
