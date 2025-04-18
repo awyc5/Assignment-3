@@ -284,6 +284,13 @@ html {
     .swiper-button-next {
         width: 30px;
     }
+    .about img {
+        width: 45%;
+    }
+    .folder-container .icons img {
+        width: 30px; 
+        height: 30px;
+    }
 
 
 @media (max-width: 480px) {
@@ -319,5 +326,17 @@ html {
     .swiper-button-next {
         width: 20px; 
     }
+    .about img {
+        width: 100%;
+    }
+    .folder-container .icons img {
+            width: 20px; 
+            height: 20px;
+        }
+    
+    .folder-container .icons {
+        gap: 5px; 
+    }
+       
 }
 }
